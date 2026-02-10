@@ -42,5 +42,5 @@
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ixlnickie/ixlnickie/output/snake.svg" alt="Snake animation" />
+  <img src="https://raw.githubusercontent.com/Platane/snk/output/ixlnickie/github-contribution-grid-snake.svg" alt="Snake animation" />
 </p>
