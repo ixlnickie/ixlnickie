@@ -40,6 +40,7 @@
 💬 **Telegram:** [@ixlnickie]
 
 ---
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/ixlnickie/ixlnickie/output/snake.svg" alt="Snake animation" />
 </p>
