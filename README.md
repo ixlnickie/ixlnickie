@@ -42,5 +42,5 @@
 ---
 
 <p align="center">
-  <img src="https://github-contribution-snake.vercel.app/github/ixlnickie" width="800" alt="Snake eating contributions" />
+  <img src="https://raw.githubusercontent.com/ixlnickie/ixlnickie/main/snake.svg" alt="Custom snake animation" />
 </p>
