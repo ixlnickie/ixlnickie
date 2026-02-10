@@ -39,3 +39,6 @@
 📧 **Контакты:** [galiakhmetova06@inbox.ru]  
 💬 **Telegram:** [@ixlnickie]
 
+---
+
+![Snake animation](https://github.com/ixlnickie/ixlnickie/blob/output/github-contribution-grid-snake.svg)
