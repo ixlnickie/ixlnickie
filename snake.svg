@@ -1,66 +1,85 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="180">
   <style>
-    @keyframes snakeMove {
+    .snake-segment { fill: #ff69b4; }
+    .square { fill: #ffb6c1; }
+    .snake-head { fill: #ff1493; }
+    .eye { fill: white; }
+    .pupil { fill: black; }
+    
+    #snake-group {
+      animation: moveSnake 15s linear infinite;
+    }
+    
+    #square1 { animation: eatSquare1 15s linear infinite; }
+    #square2 { animation: eatSquare2 15s linear infinite; }
+    #square3 { animation: eatSquare3 15s linear infinite; }
+    #square4 { animation: eatSquare4 15s linear infinite; }
+    #square5 { animation: eatSquare5 15s linear infinite; }
+    
+    @keyframes moveSnake {
       0% { transform: translateX(0); }
-      25% { transform: translateX(200px); }
-      50% { transform: translateX(400px); }
-      75% { transform: translateX(500px); }
+      20% { transform: translateX(300px); }
+      27% { transform: translateX(350px); }
+      33% { transform: translateX(400px); }
+      40% { transform: translateX(450px); }
+      47% { transform: translateX(500px); }
       100% { transform: translateX(550px); }
     }
-    @keyframes squareFade1 {
-      0%, 24% { opacity: 1; }
-      25%, 100% { opacity: 0; }
+    
+    @keyframes eatSquare1 {
+      0%, 19% { opacity: 1; }
+      20%, 100% { opacity: 0; }
     }
-    @keyframes squareFade2 {
-      0%, 49% { opacity: 1; }
-      50%, 100% { opacity: 0; }
+    
+    @keyframes eatSquare2 {
+      0%, 26% { opacity: 1; }
+      27%, 100% { opacity: 0; }
     }
-    @keyframes squareFade3 {
-      0%, 74% { opacity: 1; }
-      75%, 100% { opacity: 0; }
+    
+    @keyframes eatSquare3 {
+      0%, 32% { opacity: 1; }
+      33%, 100% { opacity: 0; }
     }
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
+    
+    @keyframes eatSquare4 {
+      0%, 39% { opacity: 1; }
+      40%, 100% { opacity: 0; }
     }
-    .snake { animation: snakeMove 10s linear infinite; }
-    .square1 { animation: squareFade1 10s linear infinite; }
-    .square2 { animation: squareFade2 10s linear infinite; }
-    .square3 { animation: squareFade3 10s linear infinite; }
-    .blinking { animation: blink 1s infinite; }
+    
+    @keyframes eatSquare5 {
+      0%, 46% { opacity: 1; }
+      47%, 100% { opacity: 0; }
+    }
   </style>
   
-  <rect width="800" height="200" fill="#0d1117"/>
+  <rect width="800" height="180" fill="#0d1117"/>
   
-  <text x="400" y="40" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="18">
-    🐍 Змейка "съедает" ваши GitHub contributions
+  <text x="400" y="40" text-anchor="middle" fill="#ff69b4" font-family="monospace" font-size="20">
+    🐍 GitHub Contributions Snake
   </text>
   
-  <rect x="300" y="90" width="20" height="20" fill="#00ff88" class="square1"/>
-  <rect x="330" y="90" width="20" height="20" fill="#00ff88" class="square2"/>
-  <rect x="360" y="90" width="20" height="20" fill="#00ff88" class="square3"/>
+  <rect id="square1" x="300" y="85" width="20" height="20" class="square"/>
+  <rect id="square2" x="350" y="85" width="20" height="20" class="square"/>
+  <rect id="square3" x="400" y="85" width="20" height="20" class="square"/>
+  <rect id="square4" x="450" y="85" width="20" height="20" class="square"/>
+  <rect id="square5" x="500" y="85" width="20" height="20" class="square"/>
   
-  <g class="snake">
-    <circle cx="100" cy="100" r="12" fill="#00ff88"/>
-    <circle cx="120" cy="100" r="12" fill="#00ff88"/>
-    <circle cx="140" cy="100" r="12" fill="#00ff88"/>
-    <circle cx="160" cy="100" r="12" fill="#00ff88"/>
-    <circle cx="180" cy="100" r="12" fill="#00ff88"/>
+  <g id="snake-group">
+    <circle cx="50" cy="100" r="12" class="snake-segment"/>
+    <circle cx="70" cy="100" r="12" class="snake-segment"/>
+    <circle cx="90" cy="100" r="12" class="snake-segment"/>
+    <circle cx="110" cy="100" r="12" class="snake-segment"/>
+    <circle cx="130" cy="100" r="12" class="snake-segment"/>
     
-    <circle cx="200" cy="100" r="15" fill="#00ff88"/>
+    <circle cx="150" cy="100" r="15" class="snake-head"/>
     
-    <circle cx="195" cy="95" r="4" fill="#ffffff"/>
-    <circle cx="195" cy="95" r="1.5" fill="#000000" class="blinking"/>
-    <circle cx="205" cy="95" r="4" fill="#ffffff"/>
-    <circle cx="205" cy="95" r="1.5" fill="#000000" class="blinking"/>
-    
-    <path d="M195 105 Q200 110 205 105" stroke="#000000" stroke-width="1.5" fill="none"/>
+    <circle cx="145" cy="95" r="4" class="eye"/>
+    <circle cx="145" cy="95" r="2" class="pupil"/>
+    <circle cx="155" cy="95" r="4" class="eye"/>
+    <circle cx="155" cy="95" r="2" class="pupil"/>
   </g>
   
-  <text x="400" y="150" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="12">
-    Змейка ползёт и "съедает" квадратики по пути!
-  </text>
-  <text x="400" y="170" text-anchor="middle" fill="#888888" font-family="monospace" font-size="10">
-    Делайте коммиты каждый день для большей активности!
+  <text x="400" y="150" text-anchor="middle" fill="#ffb6c1" font-family="monospace" font-size="14">
+    Розовая змейка "съедает" квадраты активности GitHub
   </text>
 </svg>
