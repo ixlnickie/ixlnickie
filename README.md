@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWs0OGdjcmVzOHM2Nnc3czVpazRzMzRtenVtOGFvd3Q3dXc5dmp1dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EZr27ZbJwmjE9PGyLN/giphy.gif" width="600" alt="Neon coding animation" />
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWs0OGdjcmVzOHM2Nnc3czVpazRzMzRtenVtOGFvd3Q3dXc5dmp1dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EZr27ZbJwmjE9PGyLN/giphy.gif" width="400" alt="Neon coding animation" />
 </p>
 
 # Добро пожаловать на мой GitHub профиль!
