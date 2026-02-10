@@ -1,56 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="150" viewBox="0 0 800 150">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200">
   <style>
-    @keyframes moveSnake {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(700px); }
+    @keyframes eatSquare {
+      0% { opacity: 1; }
+      100% { opacity: 0; }
     }
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
-    }
-    .snake-body { fill: #00ff88; }
-    .snake-eye { fill: #ffffff; }
-    .snake-pupil { fill: #000000; }
-    .snake-text { font-family: monospace; font-size: 14px; fill: #ffffff; }
-    .moving { animation: moveSnake 10s linear infinite; }
-    .blinking { animation: blink 1s infinite; }
+    .square { fill: #00ff88; }
+    .eaten { animation: eatSquare 1s forwards; }
   </style>
   
-  <!-- Фон -->
-  <rect width="800" height="150" fill="#0d1117"/>
+  <rect width="800" height="200" fill="#0d1117"/>
   
-  <!-- Текст -->
-  <text x="400" y="40" text-anchor="middle" class="snake-text">
-    🐍 GitHub Contributions Snake | ixlnickie
+  <text x="400" y="40" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="16">
+    🐍 Змейка "съедает" ваши GitHub contributions
   </text>
   
   <!-- Змейка -->
-  <g class="moving">
+  <g transform="translate(100, 100)">
     <!-- Тело -->
-    <circle cx="50" cy="100" r="10" class="snake-body"/>
-    <circle cx="70" cy="100" r="10" class="snake-body"/>
-    <circle cx="90" cy="100" r="10" class="snake-body"/>
-    <circle cx="110" cy="100" r="10" class="snake-body"/>
-    <circle cx="130" cy="100" r="10" class="snake-body"/>
-    
+    <circle cx="0" cy="0" r="15" fill="#00ff88"/>
+    <circle cx="25" cy="0" r="15" fill="#00ff88"/>
+    <circle cx="50" cy="0" r="15" fill="#00ff88"/>
+    <circle cx="75" cy="0" r="15" fill="#00ff88"/>
+    <circle cx="100" cy="0" r="15" fill="#00ff88"/>
     <!-- Голова -->
-    <circle cx="150" cy="100" r="12" class="snake-body"/>
-    
-    <!-- Глаза -->
-    <circle cx="145" cy="95" r="3" class="snake-eye"/>
-    <circle cx="145" cy="95" r="1" class="snake-pupil blinking"/>
-    <circle cx="155" cy="95" r="3" class="snake-eye"/>
-    <circle cx="155" cy="95" r="1" class="snake-pupil blinking"/>
+    <circle cx="125" cy="0" r="18" fill="#00ff88"/>
+    <circle cx="120" cy="-5" r="4" fill="#ffffff"/>
+    <circle cx="130" cy="-5" r="4" fill="#ffffff"/>
   </g>
   
-  <!-- Квадратики активности -->
-  <rect x="200" y="80" width="15" height="15" fill="#00ff88" opacity="0.8"/>
-  <rect x="220" y="80" width="15" height="15" fill="#00ff88" opacity="0.6"/>
-  <rect x="240" y="80" width="15" height="15" fill="#00ff88" opacity="0.4"/>
-  <rect x="260" y="80" width="15" height="15" fill="#00ff88" opacity="0.2"/>
+  <!-- Квадратики активности (которые "съедаются") -->
+  <rect x="200" y="80" width="20" height="20" class="square eaten" style="animation-delay: 0.5s"/>
+  <rect x="230" y="80" width="20" height="20" class="square eaten" style="animation-delay: 1s"/>
+  <rect x="260" y="80" width="20" height="20" class="square eaten" style="animation-delay: 1.5s"/>
+  <rect x="290" y="80" width="20" height="20" class="square eaten" style="animation-delay: 2s"/>
+  <rect x="320" y="80" width="20" height="20" class="square eaten" style="animation-delay: 2.5s"/>
   
-  <!-- Подпись -->
-  <text x="400" y="130" text-anchor="middle" class="snake-text" font-size="12">
-    Студентка прикладной информатики | C++ • C# • Java • HTML • CSS
+  <!-- Текст -->
+  <text x="400" y="150" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="12">
+    Каждый день с новыми коммитами змейка будет "съедать" больше квадратиков!
+  </text>
+  <text x="400" y="170" text-anchor="middle" fill="#888888" font-family="monospace" font-size="10">
+    Ваша активность: 68 contributions | Делайте больше коммитов для эффектной змейки!
   </text>
 </svg>
