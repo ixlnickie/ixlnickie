@@ -7,44 +7,44 @@
     .pupil { fill: black; }
     
     #snake-group {
-      animation: moveSnake 15s linear infinite;
+      animation: moveSnake 12s linear infinite;
     }
     
-    #square1 { animation: eatSquare1 15s linear infinite; }
-    #square2 { animation: eatSquare2 15s linear infinite; }
-    #square3 { animation: eatSquare3 15s linear infinite; }
-    #square4 { animation: eatSquare4 15s linear infinite; }
-    #square5 { animation: eatSquare5 15s linear infinite; }
+    #square1 { animation: eatSquare1 12s linear infinite; }
+    #square2 { animation: eatSquare2 12s linear infinite; }
+    #square3 { animation: eatSquare3 12s linear infinite; }
+    #square4 { animation: eatSquare4 12s linear infinite; }
+    #square5 { animation: eatSquare5 12s linear infinite; }
     
     @keyframes moveSnake {
       0% { transform: translateX(0); }
       
-      17% { transform: translateX(250px); }
-      20% { transform: translateX(300px); }
+      15% { transform: translateX(250px); }
+      16.5% { transform: translateX(300px); }
       
-      24% { transform: translateX(300px); }
-      27% { transform: translateX(350px); }
+      22% { transform: translateX(300px); }
+      23.5% { transform: translateX(350px); }
       
-      30% { transform: translateX(350px); }
-      33% { transform: translateX(400px); }
+      29% { transform: translateX(350px); }
+      30.5% { transform: translateX(400px); }
       
       36% { transform: translateX(400px); }
-      40% { transform: translateX(450px); }
+      37.5% { transform: translateX(450px); }
       
       43% { transform: translateX(450px); }
-      47% { transform: translateX(500px); }
+      44.5% { transform: translateX(500px); }
       
       100% { transform: translateX(550px); }
     }
     
     @keyframes eatSquare1 {
-      0%, 16.9% { opacity: 1; }
-      17%, 100% { opacity: 0; }
+      0%, 15.9% { opacity: 1; }
+      16%, 100% { opacity: 0; }
     }
     
     @keyframes eatSquare2 {
-      0%, 23.9% { opacity: 1; }
-      24%, 100% { opacity: 0; }
+      0%, 22.9% { opacity: 1; }
+      23%, 100% { opacity: 0; }
     }
     
     @keyframes eatSquare3 {
@@ -53,13 +53,13 @@
     }
     
     @keyframes eatSquare4 {
-      0%, 35.9% { opacity: 1; }
-      36%, 100% { opacity: 0; }
+      0%, 36.9% { opacity: 1; }
+      37%, 100% { opacity: 0; }
     }
     
     @keyframes eatSquare5 {
-      0%, 42.9% { opacity: 1; }
-      43%, 100% { opacity: 0; }
+      0%, 43.9% { opacity: 1; }
+      44%, 100% { opacity: 0; }
     }
   </style>
   
@@ -91,6 +91,6 @@
   </g>
   
   <text x="400" y="150" text-anchor="middle" fill="#ffb6c1" font-family="monospace" font-size="14">
-    Розовая змейка "съедает" квадраты активности GitHub
+    эщкереееее
   </text>
 </svg>
