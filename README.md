@@ -40,5 +40,6 @@
 💬 **Telegram:** [@ixlnickie]
 
 ---
-
-![Snake animation](https://github.com/ixlnickie/ixlnickie/blob/output/github-contribution-grid-snake.svg)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ixlnickie/ixlnickie/output/snake.svg" alt="Snake animation" />
+</p>
