@@ -61,7 +61,7 @@
   <rect width="800" height="180" fill="#0d1117"/>
   
   <text x="400" y="40" text-anchor="middle" fill="#ff69b4" font-family="monospace" font-size="20">
-    🐍 GitHub Contributions Snake
+    
   </text>
   
   <rect id="square1" x="300" y="85" width="20" height="20" class="square"/>
