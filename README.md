@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="300" alt="Pink dog coding animation" />
+  <img src="https://media.giphy.com/media/l4EoX23Z9R3K4nD9u/giphy.gif" width="300" alt="Pink dog animation" />
 </p>
 # 🌟 Добро пожаловать на мой GitHub профиль!
 
