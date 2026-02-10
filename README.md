@@ -1,7 +1,6 @@
 <p align="center">
-  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWs0OGdjcmVzOHM2Nnc3czVpazRzMzRtenVtOGFvd3Q3dXc5dmp1dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EZr27ZbJwmjE9PGyLN/giphy.gif" width="300" alt="Neon coding animation" />
+  <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="300" alt="Pink dog coding animation" />
 </p>
-
 # 🌟 Добро пожаловать на мой GitHub профиль!
 
 Меня зовут **ixlnickie**, и я — студентка бакалавриата по направлению **"Прикладная информатика"**. Здесь я изучаю, практикую и делюсь своими проектами в области программирования и разработки программного обеспечения.
