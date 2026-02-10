@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="150" viewBox="0 0 800 150">
+  <style>
+    @keyframes moveSnake {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(700px); }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    .snake-body { fill: #00ff88; }
+    .snake-eye { fill: #ffffff; }
+    .snake-pupil { fill: #000000; }
+    .snake-text { font-family: monospace; font-size: 14px; fill: #ffffff; }
+    .moving { animation: moveSnake 10s linear infinite; }
+    .blinking { animation: blink 1s infinite; }
+  </style>
+  
+  <!-- Фон -->
+  <rect width="800" height="150" fill="#0d1117"/>
+  
+  <!-- Текст -->
+  <text x="400" y="40" text-anchor="middle" class="snake-text">
+    🐍 GitHub Contributions Snake | ixlnickie
+  </text>
+  
+  <!-- Змейка -->
+  <g class="moving">
+    <!-- Тело -->
+    <circle cx="50" cy="100" r="10" class="snake-body"/>
+    <circle cx="70" cy="100" r="10" class="snake-body"/>
+    <circle cx="90" cy="100" r="10" class="snake-body"/>
+    <circle cx="110" cy="100" r="10" class="snake-body"/>
+    <circle cx="130" cy="100" r="10" class="snake-body"/>
+    
+    <!-- Голова -->
+    <circle cx="150" cy="100" r="12" class="snake-body"/>
+    
+    <!-- Глаза -->
+    <circle cx="145" cy="95" r="3" class="snake-eye"/>
+    <circle cx="145" cy="95" r="1" class="snake-pupil blinking"/>
+    <circle cx="155" cy="95" r="3" class="snake-eye"/>
+    <circle cx="155" cy="95" r="1" class="snake-pupil blinking"/>
+  </g>
+  
+  <!-- Квадратики активности -->
+  <rect x="200" y="80" width="15" height="15" fill="#00ff88" opacity="0.8"/>
+  <rect x="220" y="80" width="15" height="15" fill="#00ff88" opacity="0.6"/>
+  <rect x="240" y="80" width="15" height="15" fill="#00ff88" opacity="0.4"/>
+  <rect x="260" y="80" width="15" height="15" fill="#00ff88" opacity="0.2"/>
+  
+  <!-- Подпись -->
+  <text x="400" y="130" text-anchor="middle" class="snake-text" font-size="12">
+    Студентка прикладной информатики | C++ • C# • Java • HTML • CSS
+  </text>
+</svg>
