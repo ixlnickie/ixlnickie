@@ -45,6 +45,3 @@
   <img src="https://raw.githubusercontent.com/ixlnickie/ixlnickie/main/snake.svg" alt="Custom snake animation" />
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Platane/snk/output/ixlnickie/github-contribution-grid-snake.svg" alt="github-snake" />
-</p>
