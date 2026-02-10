@@ -1,45 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200">
   <style>
+    @keyframes moveSnake {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(550px); }
+    }
     @keyframes eatSquare {
       0% { opacity: 1; }
       100% { opacity: 0; }
     }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    .snake { animation: moveSnake 8s linear infinite; }
     .square { fill: #00ff88; }
-    .eaten { animation: eatSquare 1s forwards; }
+    .eaten { animation: eatSquare 0.5s forwards; }
+    .blinking { animation: blink 1s infinite; }
   </style>
   
   <rect width="800" height="200" fill="#0d1117"/>
   
-  <text x="400" y="40" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="16">
+  <text x="400" y="40" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="18">
     🐍 Змейка "съедает" ваши GitHub contributions
   </text>
   
-  <!-- Змейка -->
-  <g transform="translate(100, 100)">
-    <!-- Тело -->
-    <circle cx="0" cy="0" r="15" fill="#00ff88"/>
-    <circle cx="25" cy="0" r="15" fill="#00ff88"/>
-    <circle cx="50" cy="0" r="15" fill="#00ff88"/>
-    <circle cx="75" cy="0" r="15" fill="#00ff88"/>
-    <circle cx="100" cy="0" r="15" fill="#00ff88"/>
-    <!-- Голова -->
-    <circle cx="125" cy="0" r="18" fill="#00ff88"/>
-    <circle cx="120" cy="-5" r="4" fill="#ffffff"/>
-    <circle cx="130" cy="-5" r="4" fill="#ffffff"/>
+  <rect x="300" y="90" width="20" height="20" class="square" id="sq1"/>
+  <rect x="330" y="90" width="20" height="20" class="square" id="sq2"/>
+  <rect x="360" y="90" width="20" height="20" class="square" id="sq3"/>
+  <rect x="390" y="90" width="20" height="20" class="square" id="sq4"/>
+  <rect x="420" y="90" width="20" height="20" class="square" id="sq5"/>
+  
+  <g class="snake">
+    <circle cx="100" cy="100" r="12" fill="#00ff88"/>
+    <circle cx="120" cy="100" r="12" fill="#00ff88"/>
+    <circle cx="140" cy="100" r="12" fill="#00ff88"/>
+    <circle cx="160" cy="100" r="12" fill="#00ff88"/>
+    <circle cx="180" cy="100" r="12" fill="#00ff88"/>
+    
+    <circle cx="200" cy="100" r="15" fill="#00ff88"/>
+    
+    <circle cx="195" cy="95" r="4" fill="#ffffff"/>
+    <circle cx="195" cy="95" r="1.5" fill="#000000" class="blinking"/>
+    <circle cx="205" cy="95" r="4" fill="#ffffff"/>
+    <circle cx="205" cy="95" r="1.5" fill="#000000" class="blinking"/>
+    
+    <path d="M195 105 Q200 110 205 105" stroke="#000000" stroke-width="1.5" fill="none"/>
   </g>
   
-  <!-- Квадратики активности (которые "съедаются") -->
-  <rect x="200" y="80" width="20" height="20" class="square eaten" style="animation-delay: 0.5s"/>
-  <rect x="230" y="80" width="20" height="20" class="square eaten" style="animation-delay: 1s"/>
-  <rect x="260" y="80" width="20" height="20" class="square eaten" style="animation-delay: 1.5s"/>
-  <rect x="290" y="80" width="20" height="20" class="square eaten" style="animation-delay: 2s"/>
-  <rect x="320" y="80" width="20" height="20" class="square eaten" style="animation-delay: 2.5s"/>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const squares = ['sq1', 'sq2', 'sq3', 'sq4', 'sq5'];
+      let delay = 1500;
+      
+      squares.forEach((id, index) => {
+        setTimeout(() => {
+          const square = document.getElementById(id);
+          if (square) {
+            square.classList.add('eaten');
+          }
+        }, delay + (index * 800));
+      });
+    });
+  </script>
   
-  <!-- Текст -->
   <text x="400" y="150" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="12">
-    Каждый день с новыми коммитами змейка будет "съедать" больше квадратиков!
+    С каждым коммитом змейка растёт и съедает больше квадратиков!
   </text>
   <text x="400" y="170" text-anchor="middle" fill="#888888" font-family="monospace" font-size="10">
-    Ваша активность: 68 contributions | Делайте больше коммитов для эффектной змейки!
+    Ваша активность: 68 contributions | Делайте коммиты каждый день!
   </text>
 </svg>
