@@ -15,6 +15,3 @@
 📧 **Контакты:** [galiakhmetova06@inbox.ru]  
 💬 **Telegram:** [@ixlnickie] 🐾
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ixlnickie/ixlnickie/main/snake.svg" alt="Custom snake animation" />
-</p>
